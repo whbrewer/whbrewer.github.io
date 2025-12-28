@@ -23,15 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
 
-                // Calculate offset for fixed navbar
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
-                // Smooth scroll to target
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                // Let browser handle scroll with CSS scroll-padding-top
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });

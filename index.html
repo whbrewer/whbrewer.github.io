@@ -1,281 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Huntington Reckon - Professional bookkeeping and analytics services for auto brokers. Accurate, reliable financial management tailored to the automotive industry.">
-    <meta name="keywords" content="bookkeeping, analytics, auto broker, automotive accounting, financial services, dealer bookkeeping, Huntington">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="The Huntington Reckon - Professional bookkeeping and analytics services for auto brokers.">
     <title>The Huntington Reckon | Bookkeeping & Analytics for Auto Brokers</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: #1B4965;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: #CAE9FF;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #CAE9FF;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #FFFFFF;
+    }
+
+    a {
+        margin: 0 10px 0 10px;
+        text-decoration: none;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    p {
+        font-size: 120%;
+        font-weight: 300;
+        padding: 10px;
+    }
+
+    ul, ol {
+        font-size: 110%;
+        font-weight: 300;
+    }
+
+    .section {
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    blockquote {
+      margin: 1em 3em;
+      color: #E8E8E8;
+      border-left: 3px solid #62B6CB;
+      padding: 15px;
+      font-size: 110%;
+      font-weight: 300;
+    }
+
+    #navbar {
+        border-bottom-color: #62B6CB;
+        border-bottom-width: 3px;
+    }
+
+    .hero-section {
+        background-image:
+            linear-gradient(135deg, rgba(27, 73, 101, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%),
+            url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content .tagline {
+        font-size: 1.8rem;
+        color: #CAE9FF;
+        margin-bottom: 10px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-custom {
+        background-color: #62B6CB;
+        color: white;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        font-weight: 600;
+    }
+
+    .btn-custom:hover {
+        background-color: #5FA8D3;
+        color: white;
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        margin: 10px;
+        font-weight: 600;
+    }
+
+    .btn-outline:hover {
+        background-color: white;
+        color: #1B4965;
+    }
+    </style>
+
 </head>
+
 <body>
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">The Huntington Reckon</span>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">The Huntington Reckon</h1>
-            <p class="hero-tagline">Bookkeeping & Analytics for Auto Brokers</p>
-            <p class="hero-subtitle">Precise. Reliable. Data-Driven.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
-            </div>
-        </div>
-    </section>
+<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
+   <div class="navbar-header">
+     <a href="#" id="1" class="navbar-brand">The Huntington Reckon</a>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+       <span class="sr-only">Navigation toggle</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="collapse navbar-collapse" id="hamburger-navigation">
+     <ul class="nav navbar-nav" role="menu">
+        <li class="hidden-sm"> <a class="mynav" id="1" href="#">Home</a> </li>
+        <li> <a class="mynav" id="2" href="#">About</a> </li>
+        <li> <a class="mynav" id="3" href="#">Services</a> </li>
+        <li> <a class="mynav" id="4" href="#">Testimonials</a> </li>
+        <li> <a class="mynav" id="5" href="#">Contact</a> </li>
+     </ul>
+   </div>
+</nav>
 
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="placeholder-image">
-                        <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="400" fill="#CAE9FF"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#1B4965" font-size="24" font-family="Montserrat, sans-serif">Professional Image</text>
-                        </svg>
-                    </div>
-                </div>
-                <div class="about-content fade-in">
-                    <h2>Expert Bookkeeping & Analytics for the Auto Industry</h2>
-                    <p>At The Huntington Reckon, we understand that auto brokers face unique financial challenges. From managing complex commission structures to tracking inventory and maintaining dealer compliance, your business requires specialized expertise.</p>
-                    <p>With years of experience in automotive bookkeeping and analytics, we provide accurate, timely financial insights that help you focus on what you do best—closing deals and growing your business.</p>
-                    <p>Our industry-specific approach means we speak your language and understand the regulations that govern your operations.</p>
-                    <div class="key-points">
-                        <h3>Why Choose Us</h3>
-                        <ul>
-                            <li>Industry-specific expertise in auto broker finances</li>
-                            <li>Deep understanding of commission-based transactions</li>
-                            <li>Knowledge of dealer compliance requirements</li>
-                            <li>Personalized service tailored to your business</li>
-                        </ul>
-                    </div>
-                </div>
+<div class="section hero-section" id="1">
+    <div class="hero-content">
+        <h1>The Huntington Reckon</h1>
+        <p class="tagline">Bookkeeping & Analytics for Auto Brokers</p>
+        <p class="subtitle">Precise. Reliable. Data-Driven.</p>
+        <div>
+            <a href="#" class="btn btn-custom mynav" id="5">Get In Touch</a>
+            <a href="#" class="btn btn-outline mynav" id="3">Our Services</a>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background: linear-gradient(to bottom, #5FA8D3, #1B4965);" id="2">
+    <div class="container">
+        <div class="row">
+            <h2 style="color:white">About</h2>
+
+            <p style="color:white">At The Huntington Reckon, we understand that auto brokers face unique financial challenges. From managing complex commission structures to tracking inventory and maintaining dealer compliance, your business requires specialized expertise.</p>
+
+            <p style="color:white">With years of experience in automotive bookkeeping and analytics, we provide accurate, timely financial insights that help you focus on what you do best—closing deals and growing your business.</p>
+
+            <p style="color:white">Our industry-specific approach means we speak your language and understand the regulations that govern your operations.</p>
+
+            <div style="color:white; margin-top: 20px;">
+                <h4 style="color:#CAE9FF">Why Choose Us</h4>
+                <ul style="color:white">
+                    <li>Industry-specific expertise in auto broker finances</li>
+                    <li>Deep understanding of commission-based transactions</li>
+                    <li>Knowledge of dealer compliance requirements</li>
+                    <li>Personalized service tailored to your business</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p class="section-subtitle">Comprehensive bookkeeping & analytics tailored for auto brokers</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <path d="M24 12L12 20V36H36V20L24 12Z" stroke="#1B4965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Transaction Recording & Categorization</h3>
-                    <p>Accurate tracking of vehicle purchases, sales, and commission management with proper expense categorization.</p>
+<div class="section" style="background: linear-gradient(to bottom, #2C3E50, #1B4965);" id="3">
+    <div class="container">
+        <div class="row">
+            <h2 style="color:white">Our Services</h2>
+            <p style="color:#CAE9FF; font-size: 1.2rem;">Comprehensive bookkeeping & analytics tailored for auto brokers</p>
+
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-6">
+                    <h4 style="color:#62B6CB">Transaction Recording & Categorization</h4>
+                    <p style="color:white">Accurate tracking of vehicle purchases, sales, and commission management with proper expense categorization.</p>
+
+                    <h4 style="color:#62B6CB">Accounts Payable & Receivable</h4>
+                    <p style="color:white">Streamlined vendor payment management, customer payment tracking, and detailed aging reports.</p>
+
+                    <h4 style="color:#62B6CB">Bank Reconciliation</h4>
+                    <p style="color:white">Monthly reconciliations, discrepancy resolution, and multi-account management to keep your finances in order.</p>
+
+                    <h4 style="color:#62B6CB">Financial Reporting</h4>
+                    <p style="color:white">Clear, comprehensive Profit & Loss statements, Balance sheets, and Cash flow reports for informed decision-making.</p>
                 </div>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <circle cx="24" cy="24" r="10" stroke="#1B4965" stroke-width="2"/>
-                            <path d="M24 18V24L28 26" stroke="#1B4965" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Accounts Payable & Receivable</h3>
-                    <p>Streamlined vendor payment management, customer payment tracking, and detailed aging reports.</p>
-                </div>
+                <div class="col-md-6">
+                    <h4 style="color:#62B6CB">Tax Preparation Support</h4>
+                    <p style="color:white">Organized records for tax season, comprehensive documentation management, and CPA coordination.</p>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <rect x="14" y="14" width="20" height="20" stroke="#1B4965" stroke-width="2"/>
-                            <path d="M19 24L22 27L29 20" stroke="#1B4965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Bank Reconciliation</h3>
-                    <p>Monthly reconciliations, discrepancy resolution, and multi-account management to keep your finances in order.</p>
-                </div>
+                    <h4 style="color:#62B6CB">Inventory Management</h4>
+                    <p style="color:white">Vehicle inventory tracking, cost basis documentation, and floor plan management for efficient operations.</p>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <path d="M16 16H32M16 24H32M16 32H24" stroke="#1B4965" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Financial Reporting</h3>
-                    <p>Clear, comprehensive Profit & Loss statements, Balance sheets, and Cash flow reports for informed decision-making.</p>
-                </div>
+                    <h4 style="color:#62B6CB">Payroll Support</h4>
+                    <p style="color:white">Commission calculations, payroll coordination, and ensuring accurate compensation for your team.</p>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <path d="M18 28L24 22L30 28" stroke="#1B4965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 22V34" stroke="#1B4965" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Tax Preparation Support</h3>
-                    <p>Organized records for tax season, comprehensive documentation management, and CPA coordination.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <rect x="14" y="18" width="20" height="16" stroke="#1B4965" stroke-width="2"/>
-                            <path d="M18 18V14H30V18" stroke="#1B4965" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Inventory Management</h3>
-                    <p>Vehicle inventory tracking, cost basis documentation, and floor plan management for efficient operations.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <circle cx="24" cy="20" r="6" stroke="#1B4965" stroke-width="2"/>
-                            <path d="M14 34C14 29 18 26 24 26C30 26 34 29 34 34" stroke="#1B4965" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Payroll Support</h3>
-                    <p>Commission calculations, payroll coordination, and ensuring accurate compensation for your team.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="48" height="48" rx="8" fill="#CAE9FF"/>
-                            <path d="M20 24L24 28L32 20" stroke="#1B4965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="14" y="14" width="20" height="20" stroke="#1B4965" stroke-width="2" rx="2"/>
-                        </svg>
-                    </div>
-                    <h3>Compliance Documentation</h3>
-                    <p>Dealer license requirements, regulatory compliance tracking, and audit preparation for peace of mind.</p>
+                    <h4 style="color:#62B6CB">Compliance Documentation</h4>
+                    <p style="color:white">Dealer license requirements, regulatory compliance tracking, and audit preparation for peace of mind.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section id="testimonials" class="testimonials section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Switching to The Huntington Reckon was the best decision for our brokerage. They understand the unique challenges we face and keep our finances perfectly organized. Tax season is now stress-free!</p>
-                    <div class="testimonial-author">
-                        <div class="author-initials">JM</div>
-                        <div class="author-info">
-                            <p class="author-name">James Martinez</p>
-                            <p class="author-business">Elite Auto Brokers</p>
-                        </div>
-                    </div>
-                </div>
+<div class="section" style="background: linear-gradient(to bottom, #007755, #005544);" id="4">
+    <div class="container">
+        <h2 style="color:white">Testimonials</h2>
 
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Their industry-specific knowledge and analytics are invaluable. Finally, a bookkeeping service that understands commission structures, floor plans, and dealer compliance. Highly recommended!</p>
-                    <div class="testimonial-author">
-                        <div class="author-initials">SK</div>
-                        <div class="author-info">
-                            <p class="author-name">Sarah Kim</p>
-                            <p class="author-business">Premium Vehicle Solutions</p>
-                        </div>
-                    </div>
-                </div>
+        <blockquote style="color:white; padding: 15px">
+            "Switching to The Huntington Reckon was the best decision for our brokerage. They understand the unique challenges we face and keep our finances perfectly organized. Tax season is now stress-free!"<br>
+            &mdash;<font size="-1">James Martinez, Elite Auto Brokers</font>
+        </blockquote>
 
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Professional, responsive, and incredibly detail-oriented. The Huntington Reckon has saved us countless hours and given us peace of mind knowing our finances are in expert hands.</p>
-                    <div class="testimonial-author">
-                        <div class="author-initials">RP</div>
-                        <div class="author-info">
-                            <p class="author-name">Robert Patterson</p>
-                            <p class="author-business">RMP Auto Group</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <blockquote style="color:white" class="hidden-xs">
+            "Their industry-specific knowledge and analytics are invaluable. Finally, a bookkeeping service that understands commission structures, floor plans, and dealer compliance. Highly recommended!"<br/>
+            &mdash;<font size="-1">Sarah Kim, Premium Vehicle Solutions</font>
+        </blockquote>
+
+        <blockquote style="color:white" class="hidden-xs">
+            "Professional, responsive, and incredibly detail-oriented. The Huntington Reckon has saved us countless hours and given us peace of mind knowing our finances are in expert hands."<br>
+            &mdash;<font size="-1">Robert Patterson, RMP Auto Group</font>
+        </blockquote>
+    </div>
+</div>
+
+<div class="section" style="background: linear-gradient(to bottom, #FFFFFF, #F8F9FA);" id="5">
+    <div class="container">
+        <div class="row">
+            <h1>Contact</h1>
+
+            <center><p style="font-size:150%">Ready to streamline your auto brokerage finances?<br><br>Contact us at:<br><br>
+
+                <div align='center' style='font-size:150%'><a href='mailto:contact@huntingtonreckon.com'>contact@huntingtonreckon.com</a></div>
+            </p>
+
+            <p style="margin-top: 30px; font-size: 110%;">
+                <strong>Business Hours:</strong> Monday - Friday, 9am - 5pm EST
+            </p>
+
+            </center>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Let's Talk About Your Bookkeeping Needs</h2>
-                <p class="section-subtitle">Ready to streamline your auto brokerage finances?</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 8L10.89 13.26C11.23 13.48 11.61 13.59 12 13.59C12.39 13.59 12.77 13.48 13.11 13.26L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="#1B4965" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div>
-                            <p class="contact-label">Email</p>
-                            <a href="mailto:contact@huntingtonreckon.com" class="contact-value">contact@huntingtonreckon.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#1B4965" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="#1B4965" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <div>
-                            <p class="contact-label">Business Hours</p>
-                            <p class="contact-value">Monday - Friday: 9am - 5pm EST</p>
-                        </div>
-                    </div>
-                    <div class="trust-badges">
-                        <div class="badge">Licensed & Insured</div>
-                        <div class="badge">10+ Years Experience</div>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <p>Ready to get started? Send us an email and we'll schedule a consultation to discuss your bookkeeping and analytics needs.</p>
-                    <a href="mailto:contact@huntingtonreckon.com" class="btn btn-primary btn-large">Email Us Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
+<footer class="navbar navbar-fixed-bottom" style="background-color: #1B4965; min-height: 40px;">
+    <div class="container">
+        <div class="row" align="center" style="padding: 10px; color: #CAE9FF;">
             <p>&copy; 2025 The Huntington Reckon. All rights reserved.</p>
-            <p class="footer-tagline">Built for auto brokers, by bookkeeping & analytics experts</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
 </body>
+
+<script>
+$(document).ready(function() {
+    $('.mynav').click(function() {
+        var id = $(this).attr('id');
+        $('html, body').animate({
+            scrollTop: ($('#' + id + '.section').offset().top)
+        }, 500);
+    });
+});
+</script>
+
 </html>
