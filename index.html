@@ -71,10 +71,20 @@
     }
 
     .section {
-        height: 100%;
+        min-height: 100vh;
         padding-top: 40px;
+        padding-bottom: 40px;
         padding-left: 5px;
         padding-right: 5px;
+    }
+
+    /* Fix for mobile - allow content to determine height */
+    @media (max-width: 768px) {
+        .section {
+            min-height: auto;
+            height: auto;
+            padding-bottom: 60px;
+        }
     }
 
     blockquote {
@@ -271,17 +281,17 @@
             &mdash;<font size="-1">Dr. John Baumgardner, "the world's preeminent expert in the design of computer models for geophysical convection", US News & World Report</font>
         </blockquote>
 
-        <blockquote style="color:white" class="hidden-xs">
+        <blockquote style="color:white; padding: 15px">
             "Too bad we can't clone you!"<br/>
             &mdash;<font size="-1">Dr. John Sanford, World-renowned Geneticist, PI of Mendel's Accountant software</font>
         </blockquote>
 
-        <blockquote style="color:white" class="hidden-xs">
+        <blockquote style="color:white; padding: 15px">
             "It has been wonderful working with you. You have demonstrated excellent technical skill, initiative, and participation as a partner to this research."<br>
             &mdash;<font size="-1">Dr. Larry Vardiman, Atmospheric Scientist, Prolific Author</font>
         </blockquote>
 
-        <blockquote style="color:white" class="hidden-xs">
+        <blockquote style="color:white; padding: 15px">
             "I am very impressed that you have achieved such high mark on NLP processing. It is very important that you provided foundation upon which TTI members can continue to grow the development. I appreciate you providing that foundation."<br>
             &mdash;<font size="-1">JD Choi, CEO, Tax Technologies Inc.</font>
         </blockquote>
