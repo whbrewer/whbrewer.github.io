@@ -107,10 +107,19 @@
             url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&q=80');
         background-size: cover;
         background-position: center;
-        min-height: 500px;
+        height: 100vh !important;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* Mobile: Hero can be shorter */
+    @media (max-width: 768px) {
+        .hero-section {
+            height: auto !important;
+            min-height: 500px;
+        }
     }
 
     .hero-content {
@@ -199,7 +208,7 @@
 <div class="section hero-section" id="1">
     <div class="hero-content">
         <h1>Huntington Services</h1>
-        <p class="tagline">Precision Bookkeeping with Computational Expertise</p>
+        <p class="tagline">Advanced Bookkeeping and Tax-preparation</p>
         <p class="subtitle">Advanced Analytics. Data-Driven Insights. Engineering Precision.</p>
         <div>
             <a href="#" class="btn btn-custom mynav" id="5">Get In Touch</a>
@@ -242,30 +251,21 @@
             <div class="row" style="margin-top: 30px;">
                 <div class="col-md-6">
                     <h4 style="color:#62B6CB">Core Bookkeeping</h4>
-                    <p style="color:white">Transaction recording, accounts payable/receivable, bank reconciliation, and general ledger maintenance with precision and accuracy.</p>
+                    <p style="color:white">Transaction recording, accounts payable/receivable, bank reconciliation, and general ledger maintenance with computational precision. Leverage advanced methods to streamline workflows, automate repetitive tasks, and ensure accuracy.</p>
 
                     <h4 style="color:#62B6CB">Financial Reporting & Analysis</h4>
-                    <p style="color:white">Comprehensive P&L statements, balance sheets, cash flow reports, and advanced analytics to identify trends and opportunities.</p>
+                    <p style="color:white">Comprehensive P&L statements, balance sheets, and cash flow reports with advanced statistical analysis. Apply analytical techniques to identify trends, uncover patterns, forecast outcomes, and provide actionable insights for strategic decision-making.</p>
 
                     <h4 style="color:#62B6CB">Tax Preparation Support</h4>
-                    <p style="color:white">Organized records for tax season, comprehensive documentation management, and CPA coordination.</p>
-
-                    <h4 style="color:#62B6CB">Data Analytics & Insights</h4>
-                    <p style="color:white">Apply machine learning and statistical analysis to your financial data to uncover patterns, forecast trends, and optimize operations.</p>
+                    <p style="color:white">Organized records for tax season with meticulous documentation management and CPA coordination. Optimize tax-related workflows and apply analytical rigor to maximize deductions and ensure compliance.</p>
                 </div>
 
                 <div class="col-md-6">
-                    <h4 style="color:#62B6CB">Process Optimization</h4>
-                    <p style="color:white">Leverage computational methods to streamline workflows, automate repetitive tasks, and improve efficiency.</p>
-
                     <h4 style="color:#62B6CB">Specialized Industry Bookkeeping</h4>
-                    <p style="color:white">Customized solutions for automotive, technology, consulting, and other specialized industries with complex financial models.</p>
+                    <p style="color:white">Tailored bookkeeping for automotive, technology, consulting, and other industries with complex financial models. Custom analytical approaches for unique business structures requiring advanced problem-solving and computational expertise.</p>
 
                     <h4 style="color:#62B6CB">Compliance & Audit Preparation</h4>
-                    <p style="color:white">Regulatory compliance tracking, documentation management, and thorough audit preparation.</p>
-
-                    <h4 style="color:#62B6CB">Custom Solutions</h4>
-                    <p style="color:white">Tailored analytical and computational solutions for unique financial challenges requiring advanced problem-solving.</p>
+                    <p style="color:white">Regulatory compliance tracking, systematic documentation management, and thorough audit preparation. Apply engineering precision and analytical rigor to ensure all records meet the highest standards of accuracy and completeness.</p>
                 </div>
             </div>
         </div>
