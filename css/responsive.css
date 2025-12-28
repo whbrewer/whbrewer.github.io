@@ -1,0 +1,207 @@
+/* ===================================
+   Responsive Styles - Mobile First
+   =================================== */
+
+/* Mobile Base Styles (320px - 767px) */
+/* Base styles are in styles.css */
+
+/* ===================================
+   Tablet (768px and up)
+   =================================== */
+@media (max-width: 767px) {
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        padding: 2rem 0;
+        box-shadow: var(--shadow-lg);
+        transition: left 0.3s ease;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem;
+        color: var(--primary);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: calc(100vh - 70px);
+        margin-top: 70px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Typography adjustments */
+    :root {
+        --fs-h1: 2.5rem;
+        --fs-h2: 2rem;
+        --fs-h3: 1.5rem;
+        --section-padding: 3rem 0;
+    }
+}
+
+/* ===================================
+   Small Tablets (768px - 1023px)
+   =================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Show hamburger on tablets if needed */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+/* ===================================
+   Desktop (1024px and up)
+   =================================== */
+@media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   Large Desktop (1440px and up)
+   =================================== */
+@media (min-width: 1440px) {
+    :root {
+        --container-max-width: 1400px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===================================
+   Touch Device Optimizations
+   =================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .service-card:hover {
+        transform: none;
+    }
+
+    /* Make touch targets larger */
+    .btn {
+        min-height: 48px;
+        padding: 1rem 2rem;
+    }
+
+    .nav-link {
+        padding: 1rem;
+    }
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+@media print {
+    .navbar,
+    .hamburger {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===================================
+   Reduced Motion
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
